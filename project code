@@ -159,13 +159,13 @@ def run_matcher(_):
         if not resumes:
             print('Please provide at least one resume text.')
             return
-        print('🔍 Calculating similarity scores...')
+        print(' Calculating similarity scores...')
         result = match_resumes(job, resumes)
         print('\n===== RESUME RANKINGS (in %) =====')
         for name, score in result.items():
             print(f"{name}: {score}%")
         best = max(result, key=result.get)
-        print(f"\n🏆 Best match: {best} ({result[best]}%)")
+        print(f"\n Best match: {best} ({result[best]}%)")
 
 job_desc = widgets.Textarea(
     value='''We are seeking a highly motivated Python Developer with strong experience in data analysis, machine learning, and software development. The ideal candidate should have hands-on experience with Python libraries such as pandas, NumPy, and scikit-learn. You will work closely with the data science team to build, train, and deploy machine learning models. Knowledge of SQL, APIs, and model optimization techniques will be an added advantage. Excellent problem-solving skills and the ability to write clean, efficient code are essential.''',
